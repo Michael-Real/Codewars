@@ -1,6 +1,16 @@
 function towerBuilder(nFloors) {
   //
-  let tower = [];
+ function towerBuilder(nFloors) {
+  return Array.from({length: nFloors}, function(v, k) {
+    const spaces = ' '.repeat(nFloors - k - 1);
+    return spaces + '*'.repeat(k + k + 1) + spaces;
+  });
+}
+
+ 
+ 
+ 
+/* let tower = [];
   const maxWidth = nFloors*2-1;
 
   for (let i = 0; i < nFloors; i++) {
@@ -15,3 +25,4 @@ function towerBuilder(nFloors) {
   }
   return tower;
 }
+*/
