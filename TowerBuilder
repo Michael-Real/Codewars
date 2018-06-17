@@ -1,0 +1,17 @@
+function towerBuilder(nFloors) {
+  //
+  let tower = [];
+  const maxWidth = nFloors*2-1;
+
+  for (let i = 0; i < nFloors; i++) {
+    const currentFloor = i+1;
+    const towerBlocks = currentFloor*2-1;
+    const whiteSpace = maxWidth-towerBlocks;
+
+    tower[i] = '';
+    if (currentFloor !== nFloors) tower[i] += ' '.repeat(Math.floor(whiteSpace/2));
+    tower[i] += '*'.repeat(towerBlocks);
+    if (currentFloor !== nFloors) tower[i] += ' '.repeat(Math.floor(whiteSpace/2));
+  }
+  return tower;
+}
